@@ -47,6 +47,8 @@ KEY_C_REMOVE='{"key": "ctrl+shift+c","command": "-workbench.action.terminal.copy
 KEY_V='{"key": "meta+v","command": "workbench.action.terminal.paste","when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"}'
 KEY_V_REMOVE='{"key": "ctrl+shift+v","command": "-workbench.action.terminal.paste","when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"}'
 
+KEY_ADD='{"key": "meta+g","command": "workbench.action.terminal.sendSequence","args": {"text": "addignore\u000D"}}'
+
 # Tar file operations
 mkdir $DIR_PATH
 curl https://vscode.download.prss.microsoft.com/dbazure/download/stable/e8653663e8840adaf45af01eab5c627a5af81807/code-stable-x64-1730980362.tar.gz -o $TAR_PATH
@@ -80,6 +82,40 @@ gsettings set org.gnome.shell favorite-apps "$new_favorites_wrapped"
 # Adding path
 echo "export PATH=\$PATH:$DIR_PATH/bin" >> ~/.zshrc
 echo "export PATH=\$PATH:$DIR_PATH/bin" >> ~/.bashrc
+
+# Add ignore
+echo "alias addignore=\"echo '# Add Yours here
+
+
+# General
+a.out
+.vscode
+.DS_Store
+main.c
+test
+data
+.gitignore
+**/*.o
+*.o
+*.swp
+**/.swp
+' > .gitignore\"" >> ~/.bashrc
+echo "alias addignore=\"echo '# Add Yours here
+
+
+# General
+a.out
+.vscode
+.DS_Store
+main.c
+test
+data
+.gitignore
+**/*.o
+*.o
+*.swp
+**/.swp
+' > .gitignore\"" >> ~/.zshrc
 source ~/.bashrc
 source ~/.zshrc
 
@@ -88,3 +124,4 @@ add_keybinding "$KEY_C"
 add_keybinding "$KEY_C_REMOVE"
 add_keybinding "$KEY_V"
 add_keybinding "$KEY_V_REMOVE"
+add_keybinding "$KEY_ADD"
