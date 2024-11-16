@@ -51,7 +51,7 @@ KEY_ADD='{"key": "meta+g","command": "workbench.action.terminal.sendSequence","a
 
 # Tar file operations
 mkdir $DIR_PATH
-curl https://vscode.download.prss.microsoft.com/dbazure/download/stable/e8653663e8840adaf45af01eab5c627a5af81807/code-stable-x64-1730980362.tar.gz -o $TAR_PATH
+curl https://vscode.download.prss.microsoft.com/dbazure/download/stable/f1a4fb101478ce6ec82fe9627c43efbf9e98c813/code-stable-x64-1731511985.tar.gz -o $TAR_PATH
 tar -xzf $TAR_PATH -C $DIR_PATH
 cp -r $FOLDER_PATH/* $DIR_PATH
 rm -rf $FOLDER_PATH $TAR_PATH
