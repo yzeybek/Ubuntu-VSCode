@@ -1,6 +1,14 @@
 # Wcode
-Just run this command below, it will handle everything for you:
+
+Wcode is a script that automates vscode installation and loads it with a few new features.
+
+# Install:
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/yzeybek/Ubuntu-VSCode/refs/heads/main/setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yzeybek/Wcode/refs/heads/main/install.sh)"
+```
+
+# Uninstall:
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/yzeybek/Wcode/refs/heads/main/uninstall.sh)"
 ```
 Thanks to [@ismetba](https://github.com/ismetba) for his help...
