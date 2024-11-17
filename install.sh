@@ -27,12 +27,12 @@ add_keybinding() {
 }
 
 # Variables
-APP_NAME=Ubuntu-VSCode
+APP_NAME=Wcode
 
-DIR_NAME=Ubuntu-VSCode
+DIR_NAME=Wcode
 DIR_PATH=$HOME/$DIR_NAME
 
-TAR_NAME=Ubuntu-VSCode.tar.gz
+TAR_NAME=Wcode.tar.gz
 TAR_PATH=$DIR_PATH/$TAR_NAME
 
 FOLDER_NAME=VSCode-linux-x64
@@ -58,7 +58,7 @@ rm -rf $FOLDER_PATH $TAR_PATH
 rm -f $ICON_PATH
 
 # Get image
-curl https://raw.githubusercontent.com/yzeybek/Ubuntu-VSCode/refs/heads/main/code.png -o $ICON_PATH
+curl https://raw.githubusercontent.com/yzeybek/Wcode/refs/heads/main/code.png -o $ICON_PATH
 
 # Desktop entry
 echo "[Desktop Entry]
@@ -98,7 +98,7 @@ data
 **/*.o
 *.o
 *.swp
-**/.swp
+**/*.swp
 ' > .gitignore\"" >> ~/.bashrc
 echo "alias addignore=\"echo '# Add Yours here
 
@@ -114,7 +114,7 @@ data
 **/*.o
 *.o
 *.swp
-**/.swp
+**/*.swp
 ' > .gitignore\"" >> ~/.zshrc
 source ~/.bashrc
 source ~/.zshrc
