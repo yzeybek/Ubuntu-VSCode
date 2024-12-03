@@ -32,7 +32,7 @@ echo "[Desktop Entry]
 Name=Visual Studio Code
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
-Exec=$DIR_PATH/bin/code %F
+Exec=$DIR_PATH/bin/code --no-sandbox
 Icon=$ICON_PATH
 Type=Application
 StartupNotify=false
@@ -53,13 +53,13 @@ Name[ko]=새 빈 창
 Name[ru]=Новое пустое окно
 Name[zh_CN]=新建空窗口
 Name[zh_TW]=開新空視窗
-Exec=$DIR_PATH/bin/code --new-window %F
+Exec=$DIR_PATH/bin/code --new-window --no-sandbox
 Icon=$ICON_PATH" > $DESKTOP_PATH
 echo "[Desktop Entry]
 Name=Visual Studio Code - URL Handler
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
-Exec=$DIR_PATH/bin/code --open-url %U
+Exec=$DIR_PATH/bin/code --open-url --no-sandbox %U
 Icon=$ICON_PATH
 Type=Application
 NoDisplay=true
