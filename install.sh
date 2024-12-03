@@ -26,7 +26,6 @@ curl https://vscode.download.prss.microsoft.com/dbazure/download/stable/f1a4fb10
 tar -xzf $TAR_PATH -C $DIR_PATH
 cp -r $FOLDER_PATH/* $DIR_PATH
 rm -rf $FOLDER_PATH $TAR_PATH
-rm -f $ICON_PATH
 
 # Desktop entry
 echo "[Desktop Entry]
@@ -34,7 +33,7 @@ Name=Visual Studio Code
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
 Exec=$DIR_PATH/bin/code %F
-Icon=vscode
+Icon=$ICON_PATH
 Type=Application
 StartupNotify=false
 StartupWMClass=Code
@@ -55,13 +54,13 @@ Name[ru]=Новое пустое окно
 Name[zh_CN]=新建空窗口
 Name[zh_TW]=開新空視窗
 Exec=$DIR_PATH/bin/code --new-window %F
-Icon=vscode" > $DESKTOP_PATH
+Icon=$ICON_PATH" > $DESKTOP_PATH
 echo "[Desktop Entry]
 Name=Visual Studio Code - URL Handler
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
 Exec=$DIR_PATH/bin/code --open-url %U
-Icon=vscode
+Icon=$ICON_PATH
 Type=Application
 NoDisplay=true
 StartupNotify=true
